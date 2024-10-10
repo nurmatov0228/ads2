@@ -1,0 +1,130 @@
+import React, { useState, useEffect } from "react";
+import { Menu, MenuItem, IconButton, InputBase, Switch } from "@mui/material";
+import {
+  Search,
+  Phone,
+  AccessTime,
+  Brightness4,
+  Brightness7,
+} from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
+import "./navbar.scss";
+import { ReactTyped } from "react-typed";
+
+const Navbar = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-theme" : "light-theme";
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  }, [darkMode]);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+  return (
+    <nav className="navbar">
+      <div className="navbar__container">
+        <div className="navbar__left">
+          <NavLink to="/" className="navbar__link">
+            Asosiy
+          </NavLink>
+          <a className="navbar__link" onClick={handleClick}>
+            Xizmatlar
+          </a>
+          <Menu
+            className="navbar__menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <MenuItem className="menuitem" onClick={handleClose}>
+              Yo'lbo'yida
+            </MenuItem>
+            <MenuItem className="menuitem" onClick={handleClose}>
+              Ko'priklarda
+            </MenuItem>
+            <MenuItem className="menuitem" onClick={handleClose}>
+              Led ekran
+            </MenuItem>
+            <MenuItem className="menuitem" onClick={handleClose}>
+              Katta yo'lda reklama
+            </MenuItem>
+          </Menu>
+          <NavLink to="/about" className="navbar__link">
+            Biz haqimizda
+          </NavLink>
+          <NavLink to="/contact" className="navbar__link">
+            Kontakt
+          </NavLink>
+          <NavLink to="/vakansiya" className="navbar__link">
+            Vakansiya
+          </NavLink>
+          <NavLink to="/sharhlar" className="navbar__link">
+            Sharhlar
+          </NavLink>
+        </div>
+
+        <div className="navbar__right">
+          <div className="navbar__search">
+            <IconButton>
+              <Search />
+            </IconButton>
+            <ReactTyped
+              strings={["Here you can find anything"]}
+              typeSpeed={40}
+            />
+            <br />
+            <ReactTyped
+              strings={[
+                "Avtobuslarda reklama",
+                "Led ",
+                "Search for brands",
+              ]}
+              typeSpeed={40}
+              backSpeed={50}
+              attr="placeholder"
+              loop
+            >
+              <InputBase
+                className="navbar__input inputPlaceholder"
+                placeholder="LED ekranlarda reklama"
+              />
+            </ReactTyped>
+          </div>
+          <div className="navbar__contact">
+            <div className="navbar__contact__flex">
+              <AccessTime className="navbar__icon" />
+              <span>9:00-17:00 du-ju</span>
+            </div>
+            <div className="navbar__contact__flex">
+              <Phone className="navbar__icon" />
+              <span>+998 55 201 90 10</span>
+            </div>
+          </div>
+
+          {/* Kun/Tun rejimini qo'shamiz */}
+          <div className="navbar__theme-switch">
+            <Brightness4 className="navbar__icon" />
+            <Switch checked={darkMode} onChange={toggleDarkMode} />
+            <Brightness7 className="navbar__icon" />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
