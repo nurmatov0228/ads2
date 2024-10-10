@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, MenuItem, IconButton, InputBase, Switch } from "@mui/material";
+import { Menu, MenuItem, IconButton, Switch } from "@mui/material";
 import {
   Search,
   Phone,
@@ -83,27 +83,20 @@ const Navbar = () => {
               <Search />
             </IconButton>
             <ReactTyped
-              strings={["Here you can find anything"]}
-              typeSpeed={40}
-            />
-            <br />
-            <ReactTyped
               strings={[
                 "Avtobuslarda reklama",
-                "Led ",
-                "Search for brands",
+                "Led ekranlarda reklama",
+                "Bilboardlarda reklama",
               ]}
               typeSpeed={40}
               backSpeed={50}
               attr="placeholder"
               loop
             >
-              <InputBase
-                className="navbar__input inputPlaceholder"
-                placeholder="LED ekranlarda reklama"
-              />
+              <input className="navbar__input" />
             </ReactTyped>
           </div>
+
           <div className="navbar__contact">
             <div className="navbar__contact__flex">
               <AccessTime className="navbar__icon" />
