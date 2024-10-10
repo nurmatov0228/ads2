@@ -1,0 +1,61 @@
+@keyframes glowing2-f381235f {
+  0% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: #0a97bc;
+    background-color: var(--prColor);
+    color: #fff;
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+.in {
+  margin-top: 2.5rem;
+
+  .container {
+    padding: 0 12px;
+  }
+
+  &__container {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    animation: glowing2-f381235f 2.5s infinite;
+    border-radius: 12px;
+    padding: 9px 24px 9px 18px;
+    font-size: 14px;
+    gap: 8px;
+    box-shadow: 0 9px 18px #90adf840;
+    box-shadow: var(--number-shadow);
+    color: #fff;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    gap: 12px;
+    height: 57px;
+
+    &__img {
+      height: 38px;
+      width: 38px;
+    }
+
+    &__text {
+      position: relative;
+      text-align: left;
+      z-index: 1;
+    }
+  }
+}
