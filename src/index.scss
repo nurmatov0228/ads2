@@ -119,3 +119,19 @@
   font-weight: 900;
   src: url("./fonts/inter-v18-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+.btn {
+  background-color: #0a97bc;
+  border: 1px solid #0a97bc;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: #00000080;
+  }
+}

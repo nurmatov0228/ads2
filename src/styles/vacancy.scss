@@ -1,0 +1,76 @@
+.vacancy {
+  color: #fff;
+  margin: 70px auto;
+  max-width: 1380px;
+  padding: 10px 0;
+
+  &__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.vacancy-card {
+  background-color: #37474f;
+  border-radius: 8px;
+  padding: 20px;
+  width: 360px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__title {
+    font-size: 17px;
+    width: 350px;
+    margin-bottom: 10px;
+  }
+
+  &__skills {
+    margin-bottom: 10px;
+    text-align: left;
+
+    h4 {
+      margin-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .checkmark {
+        color: #00e676;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__button {
+    width: max-content;
+    background-color: #00acc1;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #00000080;
+      border: 1px solid #0a97bc;
+    }
+  }
+}

@@ -69,7 +69,7 @@ const Navbar = () => {
           <NavLink to="/contact" className="navbar__link">
             Kontakt
           </NavLink>
-          <NavLink to="/vakansiya" className="navbar__link">
+          <NavLink to="/vacancy" className="navbar__link">
             Vakansiya
           </NavLink>
           <NavLink to="/sharhlar" className="navbar__link">

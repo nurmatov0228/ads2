@@ -138,7 +138,7 @@ const Contact = () => {
                 onChange={settingText}
               ></textarea>
             </div>
-            <button type="submit" className="contact-page__submit">
+            <button type="submit" className="btn contact-page__submit">
               Yuborish
             </button>
           </form>
