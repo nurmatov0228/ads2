@@ -5,6 +5,7 @@ import About from "../Pages/About";
 import Vacancy from "../Pages/Vacancy";
 import NotFound from "../Pages/NotFound";
 import Contact from "../Pages/Contact";
+import Videos from "../Pages/Videos";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/vacancy" element={<Vacancy />} />
+        <Route path="allvideos" element={<Videos />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

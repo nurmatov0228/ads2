@@ -1,0 +1,78 @@
+.business-slider {
+  margin: 0;
+  background-color: #334248;
+  padding: 60px 0;
+
+  h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .business-slider__item {
+    display: flex !important;
+    align-items: center;
+    border-radius: 10px;
+    width: 668.529px;
+    height: 224px;
+
+    .business-slider__image {
+      max-width: 325px !important;
+      height: 224px;
+      border-radius: 10px;
+    }
+
+    .business-slider__content {
+      background-color: #1d2e34;
+      border-radius: 18px;
+      box-shadow: 0 6px 12px 0 #1d2e34;
+      display: flex;
+      flex-direction: column;
+      height: 224px;
+      justify-content: space-between;
+      align-items: start;
+      padding: 10px 18px;
+      width: 343.519px;
+
+      h3 {
+        color: #fff;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+      }
+
+      p {
+        color: #ccc;
+        font-size: 14px;
+        line-height: 18px;
+        max-width: 260px;
+      }
+
+      .more-button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: max-content;
+        background-color: #0a2b38;
+
+        &:hover {
+          background-color: #0a97bc;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    display: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}

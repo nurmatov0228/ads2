@@ -1,0 +1,24 @@
+.videos {
+  margin: 0px auto;
+  padding: 100px 0;
+  background-color: #1d2e34;
+
+  h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .video-slider__item {
+      width: 24%;
+      min-height: 225px;
+    }
+  }
+}

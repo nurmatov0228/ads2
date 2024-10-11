@@ -135,3 +135,18 @@
     background-color: #00000080;
   }
 }
+
+.btn1 {
+  border: 1px solid #0a97bc;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: #0a97bc;
+  }
+}
