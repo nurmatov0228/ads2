@@ -104,7 +104,9 @@ const Navbar = () => {
             </div>
             <div className="navbar__contact__flex">
               <Phone className="navbar__icon" />
-              <span>+998 55 201 90 10</span>
+              <a href="tel:+998 55 201 90 10">
+                <span>+998 55 201 90 10</span>
+              </a>
             </div>
           </div>
 
