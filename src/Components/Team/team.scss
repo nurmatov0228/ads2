@@ -57,7 +57,7 @@
   .team-slider__item {
     background-color: #0a2b38;
     padding: 25px;
-    width: 235px !important;
+    width: 275px !important;
     border-radius: 20px;
     margin: 0 10px;
     text-align: center;
@@ -129,31 +129,19 @@
     }
 
     .rate-button {
-      //   background-color: transparent;
-      //   border: 2px solid #00bcd4;
-      //   color: white;
+      width: 100%;
       padding: 10px 20px;
       border-radius: 10px;
       font-size: 16px;
       cursor: pointer;
-
-      //   &:hover {
-      //     background-color: #00bcd4;
-      //   }
     }
   }
 
   .full-list-button {
-    // background-color: #00bcd4;
-    // color: white;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
-    // border: none;
-    // &:hover {
-    //   background-color: #008c9e;
-    // }
   }
 }

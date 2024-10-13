@@ -5,16 +5,21 @@ import Map from "../Components/UI/Map/Map";
 import Video from "../Components/UI/Video/Video";
 import Business from "../Components/UI/Business/Business";
 import Team from "../Components/Team/Team";
+import Intro from "../Components/UI/Intro/Intro";
+import Stats from "../Components/Stats/Stats";
+import Clients from "../Components/UI/Clients/Clients";
 
 const Home = () => {
   return (
     <div className="home">
-      home
+      <Intro />
       <Map />
       <In />
       <Video />
       <Business />
       <Team />
+      <Stats />
+      <Clients />
     </div>
   );
 };

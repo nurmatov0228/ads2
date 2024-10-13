@@ -493,3 +493,9 @@ a {
     }
   }
 }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #0a97bc);
+  background: linear-gradient(transparent, var(--prColor));
+  border-radius: 6px;
+}

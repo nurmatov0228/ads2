@@ -1,0 +1,117 @@
+.clients-section {
+  background-color: #15232b;
+  padding: 40px;
+  color: #fff;
+
+  .clients-header {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .clients__flex {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 15px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #c1c1c1;
+    }
+
+    .become-client-btn {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .clients-slider {
+    .client-logo {
+      padding: 0 10px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    button {
+      display: none !important;
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-content {
+    background-color: #1b2b38;
+    padding: 40px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    color: white;
+
+    .modal__btn {
+      padding: 10px;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .close-icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
+    }
+
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .submit-btn {
+        background-color: #00b2ff;
+        &:hover {
+          background-color: #00a1e8;
+        }
+      }
+    }
+  }
+}
+
+.css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input {
+  color: #fff !important;
+}
+
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important;
+}
+
+.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important;
+}
