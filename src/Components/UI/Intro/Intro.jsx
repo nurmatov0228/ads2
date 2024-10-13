@@ -4,7 +4,6 @@ import video1 from "../../../img/video1.mp4";
 import video2 from "../../../img/video2.mp4";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import { Button } from "@mui/material";
 
 const videos = [
   {
