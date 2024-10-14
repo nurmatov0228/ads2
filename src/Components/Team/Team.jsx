@@ -15,6 +15,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
+import { NavLink } from "react-router-dom";
 
 const Team = () => {
   const [zoomedIndex, setZoomedIndex] = useState(null); // Zoomlangan rasm uchun state
@@ -101,9 +102,11 @@ const Team = () => {
               <span>ishonchli</span> va <span>xavfsiz</span>
             </p>
           </div>
-          <button className="full-list-button btn">
-            To'liq ro'yxatni ko'ring
-          </button>
+          <NavLink to="/teams">
+            <button className="full-list-button btn">
+              To'liq ro'yxatni ko'ring
+            </button>
+          </NavLink>
         </div>
         <Slider {...settings}>
           {teamMembers.map((member, index) => (
