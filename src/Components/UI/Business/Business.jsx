@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom"; // Routing uchun
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./business.scss"; // SCSS faylingiz
@@ -12,6 +13,8 @@ import image6 from "../../../img/kat.png";
 import image7 from "../../../img/bus.jpeg";
 
 const Business = () => {
+  const navigate = useNavigate(); // useNavigate hook'ini chaqiramiz
+
   const items = [
     {
       id: 1,
@@ -73,6 +76,10 @@ const Business = () => {
     slidesToScroll: 1,
   };
 
+  const handleMoreClick = (id) => {
+    navigate(`/oneitem/${id}`); // OneItem sahifasiga o'tish
+  };
+
   return (
     <div className="business-slider">
       <div className="container">
@@ -88,7 +95,12 @@ const Business = () => {
               <div className="business-slider__content">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <button className="more-button btn1">Ko'proq</button>
+                <button
+                  className="more-button btn1"
+                  onClick={() => handleMoreClick(item.id)}
+                >
+                  Ko'proq
+                </button>
               </div>
             </div>
           ))}

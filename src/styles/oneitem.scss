@@ -1,0 +1,45 @@
+.oneitem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 714px;
+  margin: 70px auto;
+}
+
+.oneitem-header {
+  border-radius: 24px;
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    height: auto;
+    transition: all 0.3s;
+    width: 100%;
+  }
+}
+
+.oneitem-content {
+  background: #263438;
+  border-radius: 18px;
+  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 23px;
+
+  .oneitem-title {
+    color: #fff;
+    font-family: Unbounded;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+
+  .oneitem-description {
+    color: hsla(0, 0%, 100%, 0.8);
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

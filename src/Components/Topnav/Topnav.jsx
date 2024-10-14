@@ -71,28 +71,6 @@ const Topnav = () => {
             </a>
           </div>
         </div>
-        <div className="number">
-          <button className="num-btn">
-            <img
-              src="https://www.inoutads.uz/_nuxt/call.c78c701e.svg"
-              alt="call"
-              width="20"
-              height="20"
-            />
-            <a className="num-text" href="tel:+998 55 201 90 10">
-              +998 55 201 90 10
-            </a>
-          </button>
-          <button className="num-btn">
-            <img
-              src="https://www.inoutads.uz/_nuxt/schedule.642dc0b0.svg"
-              alt="schedule"
-              width="20"
-              height="20"
-            />
-            <p className="num-text">9:00-17:00 du-ju </p>
-          </button>
-        </div>
       </div>
     </div>
   );

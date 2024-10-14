@@ -51,16 +51,16 @@ const Navbar = () => {
             onClose={handleClose}
           >
             <MenuItem className="menuitem" onClick={handleClose}>
-              Yo'lbo'yida
+              <NavLink to="/services">Yo'lbo'yida</NavLink>
             </MenuItem>
             <MenuItem className="menuitem" onClick={handleClose}>
-              Ko'priklarda
+              <NavLink to="/services">Ko'priklarda</NavLink>
             </MenuItem>
             <MenuItem className="menuitem" onClick={handleClose}>
-              Led ekran
+              <NavLink to={"/services"}>Led ekran</NavLink>
             </MenuItem>
             <MenuItem className="menuitem" onClick={handleClose}>
-              Katta yo'lda reklama
+              <NavLink to={"/services"}>Katta yo'lda reklama</NavLink>
             </MenuItem>
           </Menu>
           <NavLink to="/about" className="navbar__link">

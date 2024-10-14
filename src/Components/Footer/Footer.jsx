@@ -109,7 +109,10 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="footer__logo-img1" />
           </NavLink>
           <p>Inout jamoasi</p>
-          <p>Mualliflik © huquqi 2014-2023 Barcha huquqlar himoyalangan</p>
+          <p>
+            Mualliflik © huquqi 2014-{new Date().getFullYear()} Barcha huquqlar
+            himoyalangan
+          </p>
         </div>
       </div>
     </footer>
