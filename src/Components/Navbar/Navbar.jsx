@@ -72,9 +72,9 @@ const Navbar = () => {
           <NavLink to="/vacancy" className="navbar__link">
             Vakansiya
           </NavLink>
-          <NavLink to="/sharhlar" className="navbar__link">
+          <a href="#reviews" className="navbar__link">
             Sharhlar
-          </NavLink>
+          </a>
         </div>
 
         <div className="navbar__right">

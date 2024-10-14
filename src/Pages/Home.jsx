@@ -8,6 +8,8 @@ import Team from "../Components/Team/Team";
 import Intro from "../Components/UI/Intro/Intro";
 import Stats from "../Components/Stats/Stats";
 import Clients from "../Components/UI/Clients/Clients";
+import Comments from "../Components/Comments/Comments";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -20,6 +22,8 @@ const Home = () => {
       <Team />
       <Stats />
       <Clients />
+      <Contact />
+      <Comments />
     </div>
   );
 };
