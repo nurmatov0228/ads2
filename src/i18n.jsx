@@ -16,9 +16,12 @@ const resources = {
   },
 };
 
+// LocalStorage'dan tilni o'qib olish (agar mavjud bo'lsa)
+const savedLanguage = localStorage.getItem("language") || "uz"; // default uzbek
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "uz", // Default til
+  lng: savedLanguage, // Saqlangan tilni yuklash
   fallbackLng: "uz", // Til topilmasa default tilga qaytadi
   interpolation: {
     escapeValue: false,
