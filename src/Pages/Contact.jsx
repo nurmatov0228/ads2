@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next"; // i18next dan useTranslation ni import qilish
 import "../styles/contact.scss";
 import admin from "../img/admin.png";
 
 const Contact = () => {
+  const { t } = useTranslation(); // useTranslation hookini chaqirish
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [text, setText] = useState("");
@@ -57,7 +59,8 @@ const Contact = () => {
         },
       })
         .then((data) => {
-          toast.success("Ma'lumotlar jo'natildi", {
+          toast.success(t("contact1.success_message"), {
+            // t funksiyasidan foydalanish
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -70,7 +73,8 @@ const Contact = () => {
           });
         })
         .catch((error) => {
-          toast.error("Jo'natishda xatolik bor", {
+          toast.error(t("contact1.error_message"), {
+            // t funksiyasidan foydalanish
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -85,7 +89,7 @@ const Contact = () => {
 
       e.target.reset();
     } else {
-      toast.warning("Kiritilgan ma'lumot noto'g'ri");
+      toast.warning(t("contact1.warning_message")); // t funksiyasidan foydalanish
     }
   };
 
@@ -94,11 +98,11 @@ const Contact = () => {
       <div className="contact-page__container">
         <div className="contact-page__form-container">
           <form className="contact-page__form" onSubmit={handleSubmit}>
-            <h2 className="contact-page__title">
-              Bizga qanday savolingiz bor?
-            </h2>
+            <h2 className="contact-page__title">{t("contact1.question")}</h2>{" "}
+            {/* t funksiyasi */}
             <div className="contact-page__form-group">
-              <label htmlFor="name">Ism</label>
+              <label htmlFor="name">{t("contact1.name")}</label>{" "}
+              {/* t funksiyasi */}
               <input
                 type="text"
                 id="name"
@@ -109,7 +113,7 @@ const Contact = () => {
             </div>
             <div className="contact-page__form-group">
               <label htmlFor="emailOrTelegram">
-                Elektron pochta yoki Telegram
+                {t("contact1.email_or_telegram")} {/* t funksiyasi */}
               </label>
               <input
                 type="text"
@@ -120,7 +124,8 @@ const Contact = () => {
               />
             </div>
             <div className="contact-page__form-group">
-              <label htmlFor="phone">Telefon raqami</label>
+              <label htmlFor="phone">{t("contact1.phone_number")}</label>{" "}
+              {/* t funksiyasi */}
               <input
                 type="number"
                 id="phone"
@@ -130,7 +135,8 @@ const Contact = () => {
               />
             </div>
             <div className="contact-page__form-group">
-              <label htmlFor="message">Sizning xabaringiz</label>
+              <label htmlFor="message">{t("contact1.your_message")}</label>{" "}
+              {/* t funksiyasi */}
               <textarea
                 id="message"
                 required
@@ -139,12 +145,12 @@ const Contact = () => {
               ></textarea>
             </div>
             <button type="submit" className="btn contact-page__submit">
-              Yuborish
+              {t("contact1.submit")} {/* t funksiyasi */}
             </button>
           </form>
         </div>
         <div className="contact-page__image">
-          <img src={admin} alt="Customer Service" />
+          <img src={admin} alt={t("contact1.alt_text")} /> {/* t funksiyasi */}
         </div>
       </div>
     </div>

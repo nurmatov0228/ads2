@@ -1,0 +1,202 @@
+{
+  "telegram": "Telegram",
+  "presentation": "Taqdimot (35 mb)",
+  "applyNow": "Arizangizni yuboring",
+  "home": "Asosiy",
+  "services": "Xizmatlar",
+  "onRoad": "Yo'lbo'yida",
+  "onBridges": "Ko'priklarda",
+  "ledScreen": "Led ekran",
+  "roadAds": "Katta yo'lda reklama",
+  "aboutUs": "Biz haqimizda",
+  "contact": "Kontakt",
+  "vacancy": "Vakansiya",
+  "reviews": "Sharhlar",
+  "adsOnBuses": "Avtobuslarda reklama",
+  "adsOnLedScreens": "Led ekranlarda reklama",
+  "adsOnBillboards": "Bilboardlarda reklama",
+  "workingHours": "9:00-17:00 du-ju",
+  "video1_title": "Yangi natijalarga erisha olasiz!",
+  "video2_title": "Xizmatlarimiz bilan to'liq tanishib chiqing",
+  "consultation_button": "Konsultatsiya olish",
+  "welcome_message": "xush kelibsiz",
+  "error_message": "Kirishda xatolik bor",
+  "invalid_data_warning": "Kiritilgan ma'lumot noto'g'ri",
+  "become_client": "Mijoz bo'lish",
+  "name_label": "Ism",
+  "email_label": "Elektron pochta yoki Telegram",
+  "phone_label": "Telefon raqami",
+  "message_label": "Sizning xabaringiz",
+  "send_button": "Yuborish",
+
+  "map_title": "Sizning reklamangiz uchun",
+  "map_place": "joylar",
+  "location_popup": "Toshkent, O'zbekiston",
+  "allPosters": "Barcha afishalar",
+  "empty": "Bo'sh",
+  "booked": "Band qilingan",
+  "byRegion": "Viloyatlar bo'yicha",
+  "flagPoles": "Bayroq ustunlari",
+  "billboards": "Bilbordlar",
+  "bannerStands": "Banner stendi",
+  "prismatrons": "Prizmatronlar",
+  "securityWall": "Xavfsizlik devori",
+  "cityFormats": "Shahar formatlari",
+  "ledMonitor": "LED Monitor",
+
+  "title": "Video",
+  "allVideos": "Barcha videolar",
+  "image1": "Rasm 1",
+  "image2": "Rasm 2",
+  "image3": "Rasm 3",
+  "image4": "Rasm 4",
+  "image5": "Rasm 5",
+  "image6": "Rasm 6",
+  "image7": "Rasm 7",
+  "image8": "Rasm 8",
+  "image9": "Rasm 9",
+  "image10": "Rasm 10",
+
+  "business": {
+    "title": "Biz nima qilamiz?",
+    "title1": "Salom Dunyo",
+    "description1": "In fiction, the planet Mars, fourth from the Sun, has appeared as a setting in at least 5,000 works, portrayed...",
+    "title2": "Yo'l bo'yida",
+    "description2": "In Gabon, President Ali Bongo Ondimba is deposed by a military coup shortly after his re-election...",
+    "title3": "4K Monitor",
+    "description3": "Z-Edge U27P4K 27-дюймовый игровой монитор Ultra HD 4K, частота...",
+    "title4": "HD Ekran",
+    "description4": "Z-Edge 4K monitor, U28I4K 28 dyuymli IPS monitor Ultra HD 3840x2160 IPS oʻyin monitori, 300 cd/m², 60Hz yangilanish...",
+    "title5": "Reklama xizmati",
+    "description5": "Kompaniya tashqi reklama sohasida eng keng ko'lamli xizmatlarni taqdim etishga, poligrafiya, poligrafiya va...",
+    "title6": "LED ekranlarda reklama",
+    "description6": "Lorem Ipsum matbaa va matn terish sanoatining oddiygina soxta matnidir...",
+    "title7": "Avtobusda Tashqi Tomon",
+    "description7": "Shaxar Avtobuslarining tashqi tomoniga raklaangizni joylashtirib beraiz Toshkent shahridagi “MAN” va...",
+    "more": "Ko'proq"
+  },
+
+  "team": {
+    "title": "Bizning jamoamiz",
+    "description": "Bu sizning buyurtmangizni bajaradigan jamoa sifatli, ishonchli va xavfsiz.",
+    "full_list_button": "To'liq ro'yxatni ko'ring",
+    "Baholash": "Baholash",
+    "members": [
+      {
+        "name": "Alisa",
+        "position": "Dizayner"
+      },
+      {
+        "name": "Mira",
+        "position": "Android Dasturchi"
+      },
+      {
+        "name": "Lisa",
+        "position": "Secretar"
+      },
+      {
+        "name": "Pem",
+        "position": "Maxsulot Manageri"
+      },
+      {
+        "name": "Nasha",
+        "position": "Bloger"
+      },
+      {
+        "name": "Feruza",
+        "position": "Savdo bo'limi boshlig'i"
+      }
+    ]
+  },
+
+  "stats": {
+    "title": "Bizda",
+    "subtitle": "raqamlar mavjud",
+    "employees": "Xodimlar soni",
+    "ad_campaigns": "reklama kampaniyalarini boshladi",
+    "success_cases": "muvaffaqiyatli holatlar"
+  },
+
+  "clients": {
+    "trusted_clients": "Ishonchli mijozlar",
+    "continue": "Davom etilmoqda... Sizning logoyingiz uchun ham joy mavjud",
+    "become_client": "Mijoz bo'lish",
+    "name": "Ism",
+    "email_or_telegram": "Elektron pochta yoki Telegram",
+    "phone_number": "Telefon raqami",
+    "your_message": "Sizning xabaringiz",
+    "welcome": "Xush kelibsiz!",
+    "error": "Kirishda xatolik bor, qaytadan urinib ko'ring.",
+    "warning": "Iltimos, barcha maydonlarni to'ldiring."
+  },
+
+  "contact1": {
+    "question": "Bizga qanday savolingiz bor?",
+    "name": "Ism",
+    "email_or_telegram": "Elektron pochta yoki Telegram",
+    "phone_number": "Telefon raqami",
+    "your_message": "Sizning xabaringiz",
+    "success_message": "Ma'lumotlar jo'natildi",
+    "error_message": "Jo'natishda xatolik bor",
+    "warning_message": "Kiritilgan ma'lumot noto'g'ri",
+    "submit": "Yuborish",
+    "alt_text": "Mijozlarga xizmat"
+  },
+
+  "comments": {
+    "title": "Sharhlar",
+    "subtitle": "Biz haqimizda",
+    "writeReview": "Sharh yozish",
+    "name": "Ismingiz",
+    "rating": "Baholash",
+    "feedback": "Fikringiz",
+    "submit": "Yuborish"
+  },
+  "Video": "Video",
+
+  "about": {
+    "title": "Biz haqimizda",
+    "description": {
+      "part1": "InOut reklama joylashtirish xizmatlarining keng assortimentini taklif etadi, eng ko'p talab qilinadigani Toshkentdagi tashqi reklamadir. Siz buyurtma berishingiz va reklamalarni LED ekranlarga, shuningdek, laytboks va bannerlarga joylashtirishingiz mumkin. Reklama imkon qadar tezroq, kafolatli va hamyonbop narxda amalga oshiriladi.",
+      "part2": "ANIQ FOYDA",
+      "part3": "Tashqi reklama maqsadli auditoriyani kerakli ma'lumotlar bilan ta'minlashning arzon va juda samarali usulidir. Dastlabki ma'lumotlarni taqdim etish uchun tashrif qog'ozidan foydalanish maqsadli auditoriyangizning e'tiborini jalb qilish imkonini beradi.",
+      "part4": "LED ekranlardan tashqi reklama sifatida foydalanish eng istiqbolli formatlardan biri bo'lib, ayni paytda o'z tovarlarini (xizmatlarini) reklama qiluvchi kompaniya yoki tashkilotning yuqori maqomini ko'rsatadi."
+    },
+    "statistics": {
+      "successful_teams": "Muvaffaqiyatli jamoaviy ish",
+      "working_in_company": "Bizning kompaniyamizda ishlash",
+      "promoted_in_social_media": "Ijtimoiy tarmoqlarda targ'ib qilingan",
+      "developed_and_launched": "Ishlab chiqilgan va ishga tushirilgan",
+      "products_in_graph": "grafanadagi mahsulotlar"
+    },
+    "find_us": "Bizni ijtimoiy tarmoqlarda toping"
+  },
+
+  "vacancy1": {
+    "title": "Ish joylari",
+    "required_skills": "Kerakli ko'nikmalar",
+    "more": "Ko'proq",
+    "call_center_operator": "Qo'ng'iroqlar markazi operatori",
+    "web_designer": "Web dizayner",
+    "logistician": "Logist",
+    "education": "Ma'lumoti",
+    "experience": "Tajribasi",
+    "skills": "Ko'nikmalar"
+  },
+
+  "notfound": {
+    "iconAlt": "Topilmadi Belgisi",
+    "title": "Sahifa Topilmadi",
+    "description": "Siz qidirayotgan sahifa mavjud emas."
+  },
+
+  "footer": {
+    "logoAlt": "Logo",
+    "days": "Du-Ju",
+    "location": "O'zbekiston barcha hududlarda",
+    "socials": "Bizning ijtimoiy tarmoqlarimiz",
+    "team": "Inout jamoasi",
+    "copyright": "Mualliflik © huquqi",
+    "rights": "Barcha huquqlar himoyalangan"
+  }
+}

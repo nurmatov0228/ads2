@@ -10,21 +10,28 @@ import Facebook from "../../img/facebook.png";
 import vk from "../../img/vk.png";
 import logo from "../../img/Screenshot 2024-10-08 191403.png";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__flex">
           <div className="footer__top">
             <NavLink className="footer__logo" to={"/"}>
-              <img src={logo} alt="Logo" className="footer__logo-img" />
+              <img
+                src={logo}
+                alt={t("footer.logoAlt")}
+                className="footer__logo-img"
+              />
             </NavLink>
             <div className="footer__info">
               <div className="footer__info-item">
                 <AccessTime className="footer__info-icon" />
                 <p>
-                  9:00-17:00 <br /> du-ju
+                  9:00-17:00 <br /> {t("footer.days")}
                 </p>
               </div>
               <div className="footer__info-item">
@@ -34,7 +41,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                 >
                   <LocationOn className="footer__info-icon" />
-                  <p>O'zbekiston barcha hududlarda</p>
+                  <p>{t("footer.location")}</p>
                 </a>
               </div>
               <div className="footer__info-item">
@@ -48,7 +55,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="footer__info-item">
-                <p>Bizning ijtimoiy tarmoqlarimiz</p>
+                <p>{t("footer.socials")}</p>
                 <div className="footer__socials">
                   <a
                     href="https://t.me/yourtelegramchannel"
@@ -106,12 +113,16 @@ const Footer = () => {
         </div>
         <div className="footer__bottom">
           <NavLink to={"/"}>
-            <img src={logo} alt="Logo" className="footer__logo-img1" />
+            <img
+              src={logo}
+              alt={t("footer.logoAlt")}
+              className="footer__logo-img1"
+            />
           </NavLink>
-          <p>Inout jamoasi</p>
+          <p>{t("footer.team")}</p>
           <p>
-            Mualliflik © huquqi 2014-{new Date().getFullYear()} Barcha huquqlar
-            himoyalangan
+            {t("footer.copyright")} {new Date().getFullYear()}{" "}
+            {t("footer.rights")}
           </p>
         </div>
       </div>

@@ -499,3 +499,31 @@ a {
   background: linear-gradient(transparent, var(--prColor));
   border-radius: 6px;
 }
+
+body {
+  min-width: 1380px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1380px; /* Har doim 1024px bo'lib qoladi */
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+@media (orientation: portrait) {
+  .container {
+    max-width: 1380px;
+  }
+}
+
+@media (orientation: landscape) {
+  .container {
+    max-width: 1380px;
+  }
+}

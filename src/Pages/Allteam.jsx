@@ -11,54 +11,56 @@ import qiz6 from "../img/qiz6.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { useTranslation } from "react-i18next";
 
 const Allteam = () => {
+  const { t } = useTranslation();
   const [zoomedIndex, setZoomedIndex] = useState(null); // Zoomlangan rasm uchun state
 
   const teamMembers = [
     {
-      name: "Alisa",
-      position: "Dizayner",
+      name: t("team.members.0.name"),
+      position: t("team.members.0.position"),
       image: qiz1,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Mira",
-      position: "Android Dasturchi",
+      name: t("team.members.1.name"),
+      position: t("team.members.1.position"),
       image: qiz2,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Lisa",
-      position: "Secretar",
+      name: t("team.members.2.name"),
+      position: t("team.members.2.position"),
       image: qiz3,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Pem",
-      position: "Maxsulot Manageri",
+      name: t("team.members.3.name"),
+      position: t("team.members.3.position"),
       image: qiz4,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Nasha",
-      position: "Bloger",
+      name: t("team.members.4.name"),
+      position: t("team.members.4.position"),
       image: qiz5,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Feruza",
-      position: "Savdo bo'limi boshlig'i",
+      name: t("team.members.5.name"),
+      position: t("team.members.5.position"),
       image: qiz6,
       instagram: "#",
       telegram: "#",
@@ -88,7 +90,7 @@ const Allteam = () => {
                 className="zoom-icon"
                 onClick={() => handleZoomToggle(index)}
               >
-                <ZoomInIcon /> {/* Zoom icon */}
+                <ZoomInIcon />
               </div>
             </div>
             <h3>{member.name}</h3>
@@ -104,7 +106,7 @@ const Allteam = () => {
                 <PhoneIcon style={{ fontSize: 30 }} />
               </a>
             </div>
-            <button className="rate-button btn1">Baholash</button>
+            <button className="rate-button btn1">{t("team.Baholash")}</button>
           </div>
         ))}
       </div>

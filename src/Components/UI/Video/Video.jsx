@@ -12,19 +12,22 @@ import lg from "../../../img/lg.jpg";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // import t o'zgaruvchisi
 
 const Video = () => {
+  const { t } = useTranslation(); // t o'zgaruvchisini chaqirish
+
   const images = [
-    { id: 1, src: carpet, alt: "Image 1" },
-    { id: 2, src: song, alt: "Image 2" },
-    { id: 3, src: cloud, alt: "Image 3" },
-    { id: 4, src: lg, alt: "Image 4" },
-    { id: 5, src: song, alt: "Image 5" },
-    { id: 6, src: carpet, alt: "Image 6" },
-    { id: 7, src: song, alt: "Image 7" },
-    { id: 8, src: cloud, alt: "Image 8" },
-    { id: 9, src: lg, alt: "Image 9" },
-    { id: 10, src: song, alt: "Image 10" },
+    { id: 1, src: carpet, alt: t("video.image1") }, // JSON faylidan tarjima olish
+    { id: 2, src: song, alt: t("video.image2") },
+    { id: 3, src: cloud, alt: t("video.image3") },
+    { id: 4, src: lg, alt: t("video.image4") },
+    { id: 5, src: song, alt: t("video.image5") },
+    { id: 6, src: carpet, alt: t("video.image6") },
+    { id: 7, src: song, alt: t("video.image7") },
+    { id: 8, src: cloud, alt: t("video.image8") },
+    { id: 9, src: lg, alt: t("video.image9") },
+    { id: 10, src: song, alt: t("video.image10") },
   ];
 
   const settings = {
@@ -45,9 +48,10 @@ const Video = () => {
     <div className="video-slider">
       <div className="container">
         <div className="video-slider__container">
-          <h2>Video</h2>
+          <h2>{t("title")}</h2> {/* JSON faylidan tarjima olish */}
           <NavLink to={"allvideos"}>
-            <button className="all-videos-button btn">Barcha videolar</button>
+            <button className="all-videos-button btn">{t("allVideos")}</button>{" "}
+            {/* JSON faylidan tarjima olish */}
           </NavLink>
         </div>
         <Slider {...settings}>

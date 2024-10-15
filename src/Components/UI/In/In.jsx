@@ -1,11 +1,13 @@
 import React from "react";
 import "./in.scss";
+import { useTranslation } from "react-i18next";
 
 const In = () => {
+  const { t } = useTranslation();
   const mass = [
     {
       id: 1,
-      name: "Barcha afishalar",
+      name: "allPosters",
       img: (
         <svg
           width="38"
@@ -59,7 +61,7 @@ const In = () => {
     },
     {
       id: 2,
-      name: "Bo'sh",
+      name: "empty",
       img: (
         <svg
           width="38"
@@ -112,7 +114,7 @@ const In = () => {
     },
     {
       id: 3,
-      name: "Band qilingan",
+      name: "booked",
       img: (
         <svg
           width="38"
@@ -165,7 +167,7 @@ const In = () => {
     },
     {
       id: 4,
-      name: "Viloyatlar bo'yicha",
+      name: "byRegion",
       img: (
         <svg
           width="38"
@@ -218,7 +220,7 @@ const In = () => {
     },
     {
       id: 5,
-      name: "Bayroq ustunlari",
+      name: "flagPoles",
       img: (
         <svg
           data-v-f381235f=""
@@ -271,7 +273,7 @@ const In = () => {
     },
     {
       id: 6,
-      name: "Bilbordlar",
+      name: "billboards",
       img: (
         <svg
           data-v-f381235f=""
@@ -324,7 +326,7 @@ const In = () => {
     },
     {
       id: 7,
-      name: "Banner stendi",
+      name: "bannerStands",
       img: (
         <svg
           data-v-f381235f=""
@@ -377,7 +379,7 @@ const In = () => {
     },
     {
       id: 8,
-      name: "Prizmatronlar",
+      name: "prismatrons",
       img: (
         <svg
           data-v-f381235f=""
@@ -483,7 +485,7 @@ const In = () => {
     },
     {
       id: 10,
-      name: "Shahar formatlari",
+      name: "securityWall",
       img: (
         <svg
           data-v-f381235f=""
@@ -536,7 +538,7 @@ const In = () => {
     },
     {
       id: 11,
-      name: "LED Monitor",
+      name: "ledMonitor",
       img: (
         <svg
           data-v-f381235f=""
@@ -596,7 +598,7 @@ const In = () => {
           {mass.map((item) => (
             <button className="in__item" key={item?.id} {...item}>
               <div className="in__item__img">{item?.img}</div>
-              <p className="in__item__text">{item?.name}</p>
+              <p className="in__item__text">{t(item?.name)}</p>
             </button>
           ))}
         </div>

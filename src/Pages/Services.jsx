@@ -2,8 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // Routing uchun
 import "../styles/services.scss";
 import image1 from "../img/assalam.jpg";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate(); // useNavigate hook'ini chaqiramiz
 
   const item = [
@@ -38,7 +40,7 @@ const Services = () => {
                 className="more-button btn1"
                 onClick={() => handleMoreClick(item.id)}
               >
-                Ko'proq
+                {t("business.more")} {/* JSON faylidan tarjima olish */}
               </button>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useTranslation } from "react-i18next"; // Tarjima uchun
 import "./intro.scss";
 import video1 from "../../../img/video1.mp4";
 import video2 from "../../../img/video2.mp4";
@@ -11,16 +12,17 @@ import axios from "axios";
 
 const videos = [
   {
-    title: "Yangi natijalarga erisha olasiz!",
+    title: "video1_title", // Tarjima kaliti
     video: video1,
   },
   {
-    title: "Xizmatlarimiz bilan to'liq tanishib chiqing",
+    title: "video2_title", // Tarjima kaliti
     video: video2,
   },
 ];
 
 const Intro = () => {
+  const { t } = useTranslation(); // Tarjima hook
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -53,19 +55,11 @@ const Intro = () => {
         method: "post",
         data: {
           chat_id: chat_id,
-          text:
-            "Ism: " +
-            name +
-            ", Email: " +
-            email +
-            ", Raqam: " +
-            number +
-            ", Xabar: " +
-            text,
+          text: `Ism: ${name}, Email: ${email}, Raqam: ${number}, Xabar: ${text}`,
         },
       })
         .then((data) => {
-          toast.success(name + " xush kelibsiz", {
+          toast.success(`${name} ${t("welcome_message")}`, {
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -77,7 +71,7 @@ const Intro = () => {
           });
         })
         .catch((error) => {
-          toast.error("Kirishda xatolik bor", {
+          toast.error(t("error_message"), {
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -91,9 +85,10 @@ const Intro = () => {
 
       e.target.reset();
     } else {
-      toast.warning("Kiritilgan ma'lumot noto'g'ri");
+      toast.warning(t("invalid_data_warning"));
     }
   };
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
@@ -116,12 +111,10 @@ const Intro = () => {
   const handleDragEnd = (e) => {
     const dragEnd = e.clientX;
     if (dragEnd - dragStart > 100) {
-      // O'ngga surish - oldingi videoga o'tish
       setCurrentIndex((prevIndex) =>
         prevIndex === 0 ? videos.length - 1 : prevIndex - 1
       );
     } else if (dragStart - dragEnd > 100) {
-      // Chapga surish - keyingi videoga o'tish
       setCurrentIndex((prevIndex) =>
         prevIndex === videos.length - 1 ? 0 : prevIndex + 1
       );
@@ -134,9 +127,9 @@ const Intro = () => {
         <div className="container">
           <div className="intro__container">
             <div className="intro__flex">
-              <h1 className="intro__title">{videos[currentIndex].title}</h1>
+              <h1 className="intro__title">{t(videos[currentIndex].title)}</h1>
               <button onClick={handleOpen}>
-                <a class="btn intro__btn">Konsultatsiya olish</a>
+                <a className="btn intro__btn">{t("consultation_button")}</a>
               </button>
             </div>
             <div
@@ -164,12 +157,12 @@ const Intro = () => {
           <Modal open={open} onClose={handleClose} className="modal">
             <div className="modal-content">
               <div className="modal-header">
-                <h2>Mijoz bo'lish</h2>
+                <h2>{t("become_client")}</h2>
                 <CloseIcon className="close-icon" onClick={handleClose} />
               </div>
               <form className="modal-form" onSubmit={handleSubmit}>
                 <TextField
-                  label="Ism"
+                  label={t("name_label")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
@@ -177,7 +170,7 @@ const Intro = () => {
                   onChange={settingName}
                 />
                 <TextField
-                  label="Elektron pochta yoki Telegram"
+                  label={t("email_label")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
@@ -185,7 +178,7 @@ const Intro = () => {
                   onChange={settingEmail}
                 />
                 <TextField
-                  label="Telefon raqami"
+                  label={t("phone_label")}
                   type="number"
                   variant="outlined"
                   fullWidth
@@ -194,7 +187,7 @@ const Intro = () => {
                   onChange={settingNumber}
                 />
                 <TextField
-                  label="Sizning xabaringiz"
+                  label={t("message_label")}
                   variant="outlined"
                   fullWidth
                   margin="normal"
@@ -204,7 +197,7 @@ const Intro = () => {
                   onChange={settingText}
                 />
                 <button type="submit" className="btn modal__btn">
-                  Yuborish
+                  {t("send_button")}
                 </button>
               </form>
             </div>

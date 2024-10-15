@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./team.scss"; // SCSS faylingiz
 import qiz1 from "../../img/qiz1.png";
 import qiz2 from "../../img/qiz2.png";
 import qiz3 from "../../img/qiz3.png";
@@ -16,54 +15,57 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import ZoomInIcon from "@mui/icons-material/ZoomIn";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import "./team.scss";
 
 const Team = () => {
-  const [zoomedIndex, setZoomedIndex] = useState(null); // Zoomlangan rasm uchun state
+  const { t } = useTranslation();
+  const [zoomedIndex, setZoomedIndex] = useState(null);
 
   const teamMembers = [
     {
-      name: "Alisa",
-      position: "Dizayner",
+      name: t("team.members.0.name"),
+      position: t("team.members.0.position"),
       image: qiz1,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Mira",
-      position: "Android Dasturchi",
+      name: t("team.members.1.name"),
+      position: t("team.members.1.position"),
       image: qiz2,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Lisa",
-      position: "Secretar",
+      name: t("team.members.2.name"),
+      position: t("team.members.2.position"),
       image: qiz3,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Pem",
-      position: "Maxsulot Manageri",
+      name: t("team.members.3.name"),
+      position: t("team.members.3.position"),
       image: qiz4,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Nasha",
-      position: "Bloger",
+      name: t("team.members.4.name"),
+      position: t("team.members.4.position"),
       image: qiz5,
       instagram: "#",
       telegram: "#",
       phone: "#",
     },
     {
-      name: "Feruza",
-      position: "Savdo bo'limi boshlig'i",
+      name: t("team.members.5.name"),
+      position: t("team.members.5.position"),
       image: qiz6,
       instagram: "#",
       telegram: "#",
@@ -85,9 +87,9 @@ const Team = () => {
 
   const handleZoomToggle = (index) => {
     if (zoomedIndex === index) {
-      setZoomedIndex(null); // Agar zoomlangan bo'lsa, kichraytirish
+      setZoomedIndex(null);
     } else {
-      setZoomedIndex(index); // Aks holda, zoom qilish
+      setZoomedIndex(index);
     }
   };
 
@@ -96,15 +98,12 @@ const Team = () => {
       <div className="container">
         <div className="team-slider__flex">
           <div className="team-slider__texts">
-            <h2>Bizning jamoamiz</h2>
-            <p>
-              Bu sizning buyurtmangizni bajaradigan jamoa <span>sifatli</span>,{" "}
-              <span>ishonchli</span> va <span>xavfsiz</span>
-            </p>
+            <h2>{t("team.title")}</h2>
+            <p>{t("team.description")}</p>
           </div>
           <NavLink to="/teams">
             <button className="full-list-button btn">
-              To'liq ro'yxatni ko'ring
+              {t("team.full_list_button")}
             </button>
           </NavLink>
         </div>
@@ -121,7 +120,7 @@ const Team = () => {
                   className="zoom-icon"
                   onClick={() => handleZoomToggle(index)}
                 >
-                  <ZoomInIcon /> {/* Zoom icon */}
+                  <ZoomInIcon />
                 </div>
               </div>
               <h3>{member.name}</h3>
@@ -137,7 +136,7 @@ const Team = () => {
                   <PhoneIcon style={{ fontSize: 30 }} />
                 </a>
               </div>
-              <button className="rate-button btn1">Baholash</button>
+              <button className="rate-button btn1">{t("team.Baholash")}</button>
             </div>
           ))}
         </Slider>

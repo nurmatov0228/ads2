@@ -6,8 +6,10 @@ import cloud from "../img/cloud.png";
 import lg from "../img/lg.jpg";
 import { IconButton } from "@mui/material";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import { useTranslation } from "react-i18next";
 
 const Videos = () => {
+  const { t } = useTranslation();
   const images = [
     { id: 1, src: carpet, alt: "Image 1" },
     { id: 2, src: song, alt: "Image 2" },
@@ -23,7 +25,7 @@ const Videos = () => {
   return (
     <div className="videos">
       <div className="container">
-        <h2>Video</h2>
+        <h2>{t("Video")}</h2>
         <div className="videos__container video-slider">
           {images.map((image) => (
             <div key={image.id} className="video-slider__item">

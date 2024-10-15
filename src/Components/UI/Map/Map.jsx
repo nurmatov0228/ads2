@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import customIconUrl from "../../../img/ingreen.png"; // Ikkita import qilingan faylni to'g'ri yo'l bilan olish
 import "./map.scss";
+import { useTranslation } from "react-i18next"; // i18next dan foydalanish
 
 // Custom Icon for Marker
 const customIcon = new L.Icon({
@@ -12,13 +13,15 @@ const customIcon = new L.Icon({
 });
 
 const Map = () => {
+  const { t } = useTranslation(); // Tarjima olish
+
   return (
     <div className="map">
       <div className="container">
         <div className="map__container">
           <h1 className="map__title">
-            Sizning reklamangiz uchun <span className="text-btn">joylar</span>
-            ...
+            {t("map_title")}
+            <span className="text-btn"> {t("map_place")}</span>...
           </h1>
           <div className="map__map">
             <MapContainer
@@ -33,7 +36,7 @@ const Map = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
               <Marker position={[41.2995, 69.2401]} icon={customIcon}>
-                <Popup>Toshkent, O'zbekiston</Popup>
+                <Popup>{t("location_popup")}</Popup>
               </Marker>
             </MapContainer>
           </div>

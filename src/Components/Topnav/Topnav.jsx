@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./topnav.scss";
 import uz from "../../img/uz.png";
 import en from "../../img/en.png";
 import ru from "../../img/ru.png";
 import logo from "../../img/Screenshot 2024-10-08 191403.png";
+import { useTranslation } from "react-i18next";
+import "../../i18n";
 
 const Topnav = () => {
+  const { t, i18n } = useTranslation();
+
+  // Tilni o'zgartirish funksiyasi
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // Tilni o'zgartirish
+    localStorage.setItem("language", lng); // Tanlangan tilni localStorage'ga saqlash
+  };
+
+  useEffect(() => {
+    // Dastlabki yuklanishda localStorage'dan tilni o'qish va o'sha tilga o'zgartirish
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage && savedLanguage !== i18n.language) {
+      i18n.changeLanguage(savedLanguage);
+    }
+  }, [i18n]);
+
   return (
     <div className="header-top p-2">
       <div className="container">
         <div className="logo-wrapper">
-          <a
-            aria-current="page"
-            href="/"
-            className="router-link-active router-link-exact-active logo"
-          >
+          <a href="/" className="logo">
             <img alt="in out" width="83" height="72" src={logo} />
           </a>
           <div className="header-top-wrapper">
@@ -31,7 +45,7 @@ const Topnav = () => {
                   width="20"
                   height="20"
                 />
-                <p className="link-text">Telegram</p>
+                <p className="link-text">{t("telegram")}</p>
               </a>
               <button className="link-btn three">
                 <img
@@ -40,16 +54,16 @@ const Topnav = () => {
                   width="20"
                   height="20"
                 />
-                <p className="link-text">Taqdimot (35 mb)</p>
+                <p className="link-text">{t("presentation")}</p>
               </button>
               <a href="#registration" className="link-btn three">
                 <img
                   src="https://www.inoutads.uz/_nuxt/sms.32d91e6a.svg"
-                  alt="download"
+                  alt="sms"
                   width="20"
                   height="20"
                 />
-                <p className="link-text">Arizangizni yuboring</p>
+                <p className="link-text">{t("applyNow")}</p>
               </a>
             </div>
           </div>
@@ -57,16 +71,27 @@ const Topnav = () => {
         <div className="languages desktop">
           <div className="menu-languages">
             <a
-              aria-current="page"
-              href="/#comments"
-              className="router-link-active router-link-exact-active language-item"
+              onClick={() => changeLanguage("uz")}
+              className={`language-item ${
+                i18n.language === "uz" ? "active" : ""
+              }`}
             >
               <img src={uz} alt="flag" /> uz
             </a>
-            <a href="/en#comments" className="language-item">
+            <a
+              onClick={() => changeLanguage("en")}
+              className={`language-item ${
+                i18n.language === "en" ? "active" : ""
+              }`}
+            >
               <img src={en} alt="flag" /> en
             </a>
-            <a href="/ru#comments" className="language-item">
+            <a
+              onClick={() => changeLanguage("ru")}
+              className={`language-item ${
+                i18n.language === "ru" ? "active" : ""
+              }`}
+            >
               <img src={ru} alt="flag" /> ru
             </a>
           </div>

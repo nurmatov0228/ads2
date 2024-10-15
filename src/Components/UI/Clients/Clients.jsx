@@ -18,59 +18,41 @@ import turan from "../../../img/turan.png";
 import teamturan from "../../../img/teamturan.png";
 import turanu from "../../../img/turanu.jpeg";
 import dpt from "../../../img/dpt.png";
+import { useTranslation } from "react-i18next";
 
 // Logolar ro'yxati
 const logos = [
   { imgSrc: click, alt: "Turan Grand Hotel", link: "https://click.uz/ru" },
-  {
-    imgSrc: payme,
-    alt: "Team Turan",
-    link: "https://payme.uz/home/main",
-  },
+  { imgSrc: payme, alt: "Team Turan", link: "https://payme.uz/home/main" },
   { imgSrc: uzum, alt: "Turan University", link: "https://uzum.uz/uz/" },
   {
     imgSrc: fanta,
-    alt: "Turan Volleyball",
+    alt: "Fanta",
     link: "https://www.coca-cola.com/us/en/brands/fanta",
   },
-  {
-    imgSrc: pepsi,
-    alt: "Turan Volleyball",
-    link: "https://www.pepsi.com/",
-  },
-  {
-    imgSrc: joyda,
-    alt: "Turan Volleyball",
-    link: "https://joyda.uz/",
-  },
-  {
-    imgSrc: cola,
-    alt: "Turan Volleyball",
-    link: "https://www.coca-cola.com/uz/uz",
-  },
-  {
-    imgSrc: turan,
-    alt: "Turan Volleyball",
-    link: "https://www.turan-edu.kz/",
-  },
+  { imgSrc: pepsi, alt: "Pepsi", link: "https://www.pepsi.com/" },
+  { imgSrc: joyda, alt: "Joyda", link: "https://joyda.uz/" },
+  { imgSrc: cola, alt: "Coca Cola", link: "https://www.coca-cola.com/uz/uz" },
+  { imgSrc: turan, alt: "Turan University", link: "https://www.turan-edu.kz/" },
   {
     imgSrc: teamturan,
-    alt: "Turan Volleyball",
+    alt: "Turan Drilling",
     link: "https://www.turandrilling.com/whoweare/Pages/Turan-management.aspx",
   },
   {
     imgSrc: turanu,
-    alt: "Turan Volleyball",
+    alt: "Grzegorz Turnau",
     link: "https://www.grzegorzturnau.pl/",
   },
   {
     imgSrc: dpt,
-    alt: "Turan Volleyball",
+    alt: "Tashkent State Pedagogical University",
     link: "https://www.tdpu.uz/",
   },
 ];
 
 const Clients = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -103,19 +85,15 @@ const Clients = () => {
         method: "post",
         data: {
           chat_id: chat_id,
-          text:
-            "Ism: " +
-            name +
-            ", Email: " +
-            email +
-            ", Raqam: " +
-            number +
-            ", Xabar: " +
-            text,
+          text: `${t("clients.name")}: ${name}, ${t(
+            "clients.email"
+          )}: ${email}, ${t("clients.number")}: ${number}, ${t(
+            "clients.message"
+          )}: ${text}`,
         },
       })
         .then((data) => {
-          toast.success(name + " xush kelibsiz", {
+          toast.success(`${name} ${t("clients.welcome")}`, {
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -127,7 +105,7 @@ const Clients = () => {
           });
         })
         .catch((error) => {
-          toast.error("Kirishda xatolik bor", {
+          toast.error(t("clients.error"), {
             position: "top-right",
             autoClose: 1700,
             hideProgressBar: false,
@@ -141,7 +119,7 @@ const Clients = () => {
 
       e.target.reset();
     } else {
-      toast.warning("Kiritilgan ma'lumot noto'g'ri");
+      toast.warning(t("clients.warning"));
     }
   };
 
@@ -184,11 +162,11 @@ const Clients = () => {
       <div className="container">
         <div className="clients-header">
           <div className="clients__flex">
-            <h2>Ishonchli mijozlar</h2>
-            <p>Davom etilmoqda... Sizning logoyingiz uchun ham joy mavjud</p>
+            <h2>{t("clients.trusted_clients")}</h2>
+            <p>{t("clients.continue")}</p>
           </div>
           <button className="become-client-btn btn" onClick={handleOpen}>
-            Mijoz bo'lish
+            {t("clients.become_client")}
           </button>
         </div>
         <Slider {...settings} className="clients-slider">
@@ -203,12 +181,12 @@ const Clients = () => {
         <Modal open={open} onClose={handleClose} className="modal">
           <div className="modal-content">
             <div className="modal-header">
-              <h2>Mijoz bo'lish</h2>
+              <h2>{t("clients.become_client")}</h2>
               <CloseIcon className="close-icon" onClick={handleClose} />
             </div>
             <form className="modal-form" onSubmit={handleSubmit}>
               <TextField
-                label="Ism"
+                label={t("clients.name")}
                 variant="outlined"
                 fullWidth
                 margin="normal"
@@ -216,7 +194,7 @@ const Clients = () => {
                 onChange={settingName}
               />
               <TextField
-                label="Elektron pochta yoki Telegram"
+                label={t("clients.email_or_telegram")}
                 variant="outlined"
                 fullWidth
                 margin="normal"
@@ -224,7 +202,7 @@ const Clients = () => {
                 onChange={settingEmail}
               />
               <TextField
-                label="Telefon raqami"
+                label={t("clients.phone_number")}
                 type="number"
                 variant="outlined"
                 fullWidth
@@ -233,7 +211,7 @@ const Clients = () => {
                 onChange={settingNumber}
               />
               <TextField
-                label="Sizning xabaringiz"
+                label={t("clients.your_message")}
                 variant="outlined"
                 fullWidth
                 margin="normal"
@@ -243,7 +221,7 @@ const Clients = () => {
                 onChange={settingText}
               />
               <button type="submit" className="btn modal__btn">
-                Yuborish
+                {t("clients.submit")}
               </button>
             </form>
           </div>

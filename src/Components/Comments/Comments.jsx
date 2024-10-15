@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { Star } from "@mui/icons-material";
+import { useTranslation } from "react-i18next"; // i18next import
 import "./comments.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -36,6 +37,7 @@ const initialCommentsData = [
 ];
 
 const Comments = () => {
+  const { t } = useTranslation(); // i18next dan foydalanish
   const [commentsData, setCommentsData] = useState(initialCommentsData);
   const [isModalOpen, setModalOpen] = useState(false);
   const [newComment, setNewComment] = useState({
@@ -84,12 +86,14 @@ const Comments = () => {
       <div className="container">
         <div className="comments__flex">
           <h2 className="comments__title">
-            <span className="comments__title--highlight">Sharhlar</span> Biz
-            haqimizda
+            <span className="comments__title--highlight">
+              {t("comments.title")}
+            </span>{" "}
+            {t("comments.subtitle")}
           </h2>
           <button className="comments__button btn" onClick={openModal}>
             <EditNoteIcon />
-            Sharh yozish
+            {t("comments.writeReview")}
           </button>
         </div>
         <Slider {...settings}>
@@ -127,10 +131,10 @@ const Comments = () => {
               <button className="comments__modal-close" onClick={closeModal}>
                 &times;
               </button>
-              <h2>Sharh yozish</h2>
+              <h2>{t("comments.writeReview")}</h2>
               <form onSubmit={handleSubmit}>
                 <label>
-                  Ismingiz
+                  {t("comments.name")}
                   <input
                     type="text"
                     name="name"
@@ -140,7 +144,7 @@ const Comments = () => {
                   />
                 </label>
                 <label>
-                  Baholash
+                  {t("comments.rating")}
                   <div className="comments__rating-input">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <Star
@@ -155,7 +159,7 @@ const Comments = () => {
                   </div>
                 </label>
                 <label>
-                  Fikringiz
+                  {t("comments.feedback")}
                   <textarea
                     name="comment"
                     value={newComment.comment}
@@ -163,7 +167,7 @@ const Comments = () => {
                     required
                   ></textarea>
                 </label>
-                <button type="submit">Yuborish</button>
+                <button type="submit">{t("comments.submit")}</button>
               </form>
             </div>
           </div>

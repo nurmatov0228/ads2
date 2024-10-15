@@ -11,59 +11,54 @@ import image4 from "../../../img/snakers.jpg";
 import image5 from "../../../img/3d.jpeg";
 import image6 from "../../../img/kat.png";
 import image7 from "../../../img/bus.jpeg";
+import { useTranslation } from "react-i18next"; // import t o'zgaruvchisi
 
 const Business = () => {
+  const { t } = useTranslation(); // t o'zgaruvchisini chaqirish
   const navigate = useNavigate(); // useNavigate hook'ini chaqiramiz
 
   const items = [
     {
       id: 1,
       image: image1,
-      title: "Salom Dunyo",
-      description:
-        "In fiction, the planet Mars, fourth from the Sun, has appeared as a setting in at least 5,000 works, portrayed...",
+      title: t("business.title1"), // JSON faylidan tarjima olish
+      description: t("business.description1"), // JSON faylidan tarjima olish
     },
     {
       id: 2,
       image: image2,
-      title: "Yo'l bo'yida",
-      description:
-        "In Gabon, President Ali Bongo Ondimba is deposed by a military coup shortly after his re-election...",
+      title: t("business.title2"),
+      description: t("business.description2"),
     },
     {
       id: 3,
       image: image3,
-      title: "4K Monitor",
-      description:
-        "Z-Edge U27P4K 27-дюймовый игровой монитор Ultra HD 4K, частота",
+      title: t("business.title3"),
+      description: t("business.description3"),
     },
     {
       id: 4,
       image: image4,
-      title: "HD Ekran",
-      description:
-        "Z-Edge 4K monitor, U28I4K 28 dyuymli IPS monitor Ultra HD 3840x2160 IPS oʻyin monitori, 300 cd/m², 60Hz yangilanish...",
+      title: t("business.title4"),
+      description: t("business.description4"),
     },
     {
       id: 5,
       image: image5,
-      title: "Reklama xizmati",
-      description:
-        "Kompaniya tashqi reklama sohasida eng keng ko'lamli xizmatlarni taqdim etishga, poligrafiya, poligrafiya va...",
+      title: t("business.title5"),
+      description: t("business.description5"),
     },
     {
       id: 6,
       image: image6,
-      title: "LED ekranlarda reklama",
-      description:
-        "Lorem Ipsum matbaa va matn terish sanoatining oddiygina soxta matnidir. Lorem Ipsum sanoat bo'lgan ...",
+      title: t("business.title6"),
+      description: t("business.description6"),
     },
     {
       id: 7,
       image: image7,
-      title: "Avtobusda Tashqi Tomon",
-      description:
-        "Shaxar Avtobuslarining tashqi tomoniga raklaangizni joylashtirib beraiz Toshkent shahridagi “MAN” va...",
+      title: t("business.title7"),
+      description: t("business.description7"),
     },
   ];
 
@@ -83,7 +78,7 @@ const Business = () => {
   return (
     <div className="business-slider">
       <div className="container">
-        <h2>Biz nima qilamiz?</h2>
+        <h2>{t("business.title")}</h2> {/* JSON faylidan tarjima olish */}
         <Slider {...settings}>
           {items.map((item) => (
             <div key={item.id} className="business-slider__item">
@@ -99,7 +94,7 @@ const Business = () => {
                   className="more-button btn1"
                   onClick={() => handleMoreClick(item.id)}
                 >
-                  Ko'proq
+                  {t("business.more")} {/* JSON faylidan tarjima olish */}
                 </button>
               </div>
             </div>
