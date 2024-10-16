@@ -1,5 +1,5 @@
 .videos {
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 100px 0;
   background-color: #1d2e34;
 
@@ -19,6 +19,58 @@
     .video-slider__item {
       width: 24%;
       min-height: 225px;
+
+      .video-slider__image {
+        width: 100%;
+        border-radius: 18px;
+      }
+
+      .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        svg {
+          font-size: 50px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .videos {
+  background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+
+  h2 {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  &__container {
+    .video-slider__item {
+      .video-slider__image {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+      }
+
+      .play-button {
+        svg {
+          color: #007bff; /* Kun rejimi uchun play button rangi */
+        }
+
+        &:hover {
+          svg {
+            color: #0056b3; /* Kun rejimi hover holatda */
+          }
+        }
+      }
     }
   }
 }
