@@ -163,6 +163,7 @@
       "part4": "LED ekranlardan tashqi reklama sifatida foydalanish eng istiqbolli formatlardan biri bo'lib, ayni paytda o'z tovarlarini (xizmatlarini) reklama qiluvchi kompaniya yoki tashkilotning yuqori maqomini ko'rsatadi."
     },
     "statistics": {
+      "title": "Bizning qisqa statistika",
       "successful_teams": "Muvaffaqiyatli jamoaviy ish",
       "working_in_company": "Bizning kompaniyamizda ishlash",
       "promoted_in_social_media": "Ijtimoiy tarmoqlarda targ'ib qilingan",

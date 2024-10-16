@@ -12,9 +12,8 @@ const Services = () => {
     {
       id: 1,
       image: image1,
-      title: "Salom Dunyo",
-      description:
-        "In fiction, the planet Mars, fourth from the Sun, has appeared as a setting in at least 5,000 works, portrayed...",
+      title: t("business.title1"), // JSON faylidan tarjima olish
+      description: t("business.description1"), // JSON faylidan tarjima olish
     },
   ];
 
@@ -25,7 +24,7 @@ const Services = () => {
   return (
     <div className="business-slider">
       <div className="container">
-        <h2>Biz nima qilamiz?</h2>
+        <h2>{t("business.title")}</h2>
         {item.map((item) => (
           <div key={item.id} className="business-slider__item">
             <img

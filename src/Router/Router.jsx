@@ -21,7 +21,7 @@ const Router = () => {
         <Route path="/allvideos" element={<Videos />} />
         <Route path="/teams" element={<Allteam />} />
         <Route path="/oneitem/:id" element={<OneItem />} />
-        <Route path="services" element={<Services />} />
+        <Route path="/services" element={<Services />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
