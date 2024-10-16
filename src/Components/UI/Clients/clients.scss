@@ -1,5 +1,5 @@
 .clients-section {
-  background-color: #15232b;
+  background-color: #15232b; /* Tun rejimi uchun fon rangi */
   padding: 40px;
   color: #fff;
 
@@ -96,6 +96,7 @@
 
       .submit-btn {
         background-color: #00b2ff;
+
         &:hover {
           background-color: #00a1e8;
         }
@@ -108,10 +109,73 @@
   color: #fff !important;
 }
 
-.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root {
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
+.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
   color: #fff !important;
 }
 
+/* Yengil rejim */
+body.light-theme .clients-section {
+  background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+  color: #000; /* Kun rejimi uchun matn rangi */
+
+  .clients-header {
+    h2 {
+      color: #000; /* Kun rejimi uchun h2 matn rangi */
+    }
+
+    p {
+      color: #333; /* Kun rejimi uchun matn rangi */
+    }
+
+    .become-client-btn {
+      background-color: #007bff; /* Kun rejimi uchun button rangi */
+      color: #fff;
+
+      &:hover {
+        background-color: #0056b3; /* Kun rejimi hover holatda */
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .clients-slider {
+    .client-logo {
+      img {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+      }
+    }
+  }
+}
+
+body.light-theme .modal .modal-content {
+  background-color: #ffffff; /* Kun rejimi uchun modal fon rangi */
+  color: #000; /* Kun rejimi uchun matn rangi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+
+  .modal-header {
+    h2 {
+      color: #000; /* Kun rejimi uchun h2 matn rangi */
+    }
+
+    .close-icon {
+      color: #000; /* Kun rejimi uchun icon rangi */
+    }
+  }
+
+  .modal-form .submit-btn {
+    background-color: #007bff; /* Kun rejimi uchun button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input,
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
 .css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
-  color: #fff !important;
+  color: #000 !important; /* Kun rejimi uchun matn rangi */
 }

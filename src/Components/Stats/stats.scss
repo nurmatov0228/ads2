@@ -1,11 +1,11 @@
 .stats {
-  background-color: #18262f; /* Background rangi */
+  background-color: #18262f; /* Tun rejimi uchun fon rangi */
   padding: 50px 0;
   display: flex;
   justify-content: center;
 
   &__container {
-    background-color: #2d404b; /* Ichki kartochka fon rangi */
+    background-color: #2d404b; /* Tun rejimi uchun ichki kartochka fon rangi */
     padding: 30px 40px;
     border-radius: 10px;
     display: flex;
@@ -13,7 +13,7 @@
   }
 
   &__title {
-    color: white;
+    color: white; /* Tun rejimi uchun matn rangi */
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@
         font-size: 80px;
         font-weight: 500;
         line-height: 90px;
-        color: white;
+        color: white; /* Tun rejimi uchun raqamlar rangi */
         display: flex;
 
         p {
@@ -49,7 +49,7 @@
 
       .stats__description {
         margin-top: 20px;
-        color: #c4c4c4;
+        color: #c4c4c4; /* Tun rejimi uchun tavsif matni */
         font-family: Unbounded;
         font-size: 18px;
         font-weight: 400;
@@ -59,6 +59,40 @@
 
     .stats__rocket {
       max-width: 220px;
+    }
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .stats {
+  background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+
+  &__container {
+    background-color: #ffffff; /* Kun rejimi uchun ichki kartochka fon rangi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+  }
+
+  &__title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+
+    span {
+      color: #007bff; /* Kun rejimi uchun raqamlar rangi */
+    }
+  }
+
+  &__items {
+    .stats__item {
+      .stats__number {
+        color: #000; /* Kun rejimi uchun raqamlar rangi */
+
+        p {
+          color: #007bff;
+        }
+      }
+
+      .stats__description {
+        color: #333; /* Kun rejimi uchun tavsif matni */
+      }
     }
   }
 }

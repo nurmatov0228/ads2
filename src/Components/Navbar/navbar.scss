@@ -2,6 +2,12 @@
 body.light-theme {
   background-color: #fff;
   color: #000;
+
+  .navbar__contact__flex {
+    span {
+      color: #000;
+    }
+  }
 }
 
 /* Dark mode styling */
@@ -25,10 +31,10 @@ body.dark-theme {
   &__left {
     display: flex;
     align-items: center;
-
     .navbar__link {
       color: var(--navbar-link-color);
       margin-right: 20px;
+
       &:hover {
         color: #00caff;
         transition: 0.3s;
@@ -63,6 +69,7 @@ body.dark-theme {
         padding-left: 0.5rem; /* Ikkilamchi ichki chekka */
         font-size: 1rem;
         width: 100%; /* Input uzunligini moslash */
+
         &::placeholder {
           color: white; /* Placeholder matn rangi */
         }
@@ -116,14 +123,43 @@ body.dark-theme {
   }
 }
 
-/* Light mode variables */
+/* Yengil rejim */
 body.light-theme {
-  --navbar-bg-color: #2c3e50;
-  --navbar-link-color: white;
-  --navbar-text-color: white;
+  .css-99wn1p-MuiList-root-MuiMenu-list {
+    background-color: #f8f9fa !important; /* Kun rejimida fon rangi */
+    color: #212529 !important;
+
+    a {
+      color: #1667b9 !important;
+    } /* Kun rejimida matn rangi */
+  }
+
+  .menuitem {
+    &:hover {
+      cursor: pointer;
+      color: #0056b3; /* Kun rejimida hover rangi */
+      transition: 0.3s;
+    }
+  }
+
+  .navbar__search {
+    background-color: #dde5ed; /* Kun rejimida to'rtburchakning orqa foni */
+    input {
+      background-color: #e0e5eb; /* Input orqa foni */
+      color: #000 !important; /* Kun rejimida matn rangi */
+
+      &::placeholder {
+        color: #6c757d; /* Placeholder matn rangi */
+      }
+    }
+  }
+
+  --navbar-bg-color: #f8f9fa; /* Yengil fon */
+  --navbar-link-color: #007bff; /* Link rangi */
+  --navbar-text-color: #212529; /* Matn rangi */
 }
 
-/* Dark mode variables */
+/* Quyuq rejim */
 body.dark-theme {
   --navbar-bg-color: #34495e;
   --navbar-link-color: #fff;

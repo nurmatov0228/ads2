@@ -43,3 +43,18 @@
     line-height: 22px;
   }
 }
+
+/* Yengil rejim */
+body.light-theme .oneitem-content {
+  background: #ffffff; /* Kun rejimi uchun orqa fon */
+  color: #000; /* Matn rangi */
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+
+  .oneitem-title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  .oneitem-description {
+    color: #333; /* Kun rejimi uchun matn rangi */
+  }
+}

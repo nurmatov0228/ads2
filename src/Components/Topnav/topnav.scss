@@ -87,14 +87,6 @@ header .header-top {
             line-height: 16px;
           }
         }
-
-        .link-btn.one {
-          animation-delay: 0.5s;
-        }
-
-        .link-btn.three {
-          animation-delay: 1s;
-        }
       }
     }
 
@@ -124,7 +116,6 @@ header .header-top {
     display: flex;
     transform: rotate(40deg);
   }
-
   to {
     display: none;
     left: 300%;
@@ -132,7 +123,64 @@ header .header-top {
   }
 }
 
-.language-item:hover {
-  color: #00caff;
-  transition: 0.3s;
+/* Yengil rejim */
+body.light-theme {
+  .header-top {
+    background-color: #f8f9fa; /* Yengil fon */
+    color: #212529; /* Qora matn */
+
+    .link-btn {
+      background-color: #0062cc !important; /* Yengil tugma */
+      color: #fff; /* Tugma matni */
+
+      svg {
+        color: #fff; /* Tugma ichidagi ikon rang */
+      }
+
+      &:hover {
+        background-color: #0056b3 !important; /* Hover holatda tugma */
+        color: #fff; /* Hover holatda tugma matni */
+      }
+    }
+
+    .language-item {
+      color: #212529; /* Qora matn */
+
+      &:hover {
+        color: #00caff;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+/* Quyuq rejim (Siz kiritgan ranglar) */
+body.dark-theme {
+  .header-top {
+    background-color: rgb(3, 22, 29);
+    color: #fff;
+
+    .link-btn {
+      background-color: #555;
+      color: #fff;
+
+      svg {
+        color: #fff; /* Tugma ichidagi ikon rang */
+      }
+
+      &:hover {
+        background-color: #333; /* Hover holatda tugma */
+        color: #fff; /* Hover holatda tugma matni */
+      }
+    }
+
+    .language-item {
+      color: #fff;
+
+      &:hover {
+        color: #00caff;
+        transition: 0.3s;
+      }
+    }
+  }
 }

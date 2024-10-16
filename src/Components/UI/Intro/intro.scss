@@ -8,7 +8,6 @@
   background-image: url("../../../img/velosiped.jpg"); /* Fon rasmi */
   background-size: auto;
   background-position: center;
-
   .intro2 {
     height: 100%;
     width: 100%;
@@ -19,13 +18,11 @@
     background-color: rgba(47, 47, 47, 0.3);
     position: absolute;
   }
-
   &__container {
     display: flex;
     margin-top: 30px;
     justify-content: space-between;
   }
-
   &__flex {
     display: flex;
     flex-direction: column;
@@ -35,7 +32,6 @@
     min-height: 380px;
     width: 100%;
   }
-
   &__btn {
     font-size: 16px;
     text-decoration: none;
@@ -44,7 +40,6 @@
     text-align: center;
     width: max-content;
   }
-
   &__title {
     color: #fff;
     font-size: 52px;
@@ -52,18 +47,15 @@
     margin-right: 20px;
     text-align: left;
   }
-
   &__video-container {
     width: 60%;
     height: 60%;
     position: relative;
     perspective: 1000px;
-
     &:active .intro__video {
       transform: scale(1);
     }
   }
-
   &__video {
     width: 100%;
     height: 100%;
@@ -73,7 +65,6 @@
     transition: transform 0.5s ease;
     transform-style: preserve-3d;
   }
-
   &__play-pause {
     position: absolute;
     top: 50%;
@@ -85,7 +76,6 @@
     border-radius: 50%;
     padding: 10px;
     transition: background-color 0.3s ease;
-
     &:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
@@ -106,4 +96,31 @@
 
 .css-1jk99ih-MuiInputBase-input-MuiOutlinedInput-input {
   color: #fff !important;
+}
+
+/* Yengil rejim */
+body.light-theme .intro {
+  background-image: url("../../../img/sunny.jpg"); /* Kun rejimi uchun fon rasmi */
+  .intro2 {
+    background-color: rgba(255, 255, 255, 0.8); /* Kun rejimi uchun fon rang */
+  }
+  &__title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+  &__play-pause {
+    color: #000; /* Kun rejimi uchun tugma rangi */
+    background-color: rgba(255, 255, 255, 0.5); /* Kun rejimi uchun orqa fon */
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.7); /* Hover holatda */
+    }
+  }
+}
+
+.css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input {
+  color: #000 !important; /* Kun rejimi uchun input matn rangi */
+}
+
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
+.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
+  color: #000 !important; /* Kun rejimi uchun label matn rangi */
 }

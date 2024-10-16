@@ -33,13 +33,13 @@
 
   h2 {
     font-size: 36px;
-    color: #fff;
+    color: #fff; // Tun rejimi uchun matn rangi
     margin-bottom: 10px;
   }
 
   p {
     font-size: 18px;
-    color: #b5b5b5;
+    color: #b5b5b5; // Tun rejimi uchun matn rangi
     margin-bottom: 20px;
     margin-top: 20px;
 
@@ -55,7 +55,7 @@
   }
 
   .team-slider__item {
-    background-color: #0a2b38;
+    background-color: #0a2b38; // Tun rejimi uchun orqa fon rangi
     padding: 25px;
     width: 275px !important;
     border-radius: 20px;
@@ -64,7 +64,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     h3 {
-      color: #fff;
+      color: #fff; // Tun rejimi uchun matn rangi
       font-size: 20px;
       margin-top: 10px;
       line-height: 24px;
@@ -72,7 +72,7 @@
     }
 
     p {
-      color: #ccc;
+      color: #ccc; // Tun rejimi uchun matn rangi
       font-size: 14px;
       line-height: 18px;
       margin-top: 5px;
@@ -109,6 +109,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         i {
           color: white;
         }
@@ -122,6 +123,7 @@
         color: white;
         font-size: 20px;
         margin: 0 10px;
+
         &:hover {
           color: #00bcd4;
         }
@@ -143,5 +145,60 @@
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .team-slider {
+  h2 {
+    color: #000; // Kun rejimi uchun matn rangi
+  }
+
+  p {
+    color: #333; // Kun rejimi uchun matn rangi
+  }
+
+  .team-slider__item {
+    background-color: #fff; // Kun rejimi uchun orqa fon rangi
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Yengil soya
+
+    h3 {
+      color: #000; // Kun rejimi uchun matn rangi
+    }
+
+    p {
+      color: #666; // Kun rejimi uchun matn rangi
+    }
+
+    .team-slider__image {
+      .zoom-icon {
+        background-color: #007bff; // Kun rejimi uchun zoom icon rangi
+
+        &:hover {
+          background-color: #0056b3; // Kun rejimi hover holatda
+          transition: 0.3s ease;
+        }
+      }
+    }
+
+    .social-links {
+      a {
+        color: #007bff; // Kun rejimi uchun icon rangi
+
+        &:hover {
+          color: #0056b3;
+        }
+      }
+    }
+
+    .rate-button {
+      background-color: #007bff; // Kun rejimi uchun button rangi
+      color: #fff;
+
+      &:hover {
+        background-color: #0056b3; // Kun rejimi hover holatda
+        transition: 0.3s ease;
+      }
+    }
   }
 }

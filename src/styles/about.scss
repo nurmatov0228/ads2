@@ -97,6 +97,7 @@
         font-size: 48px;
         font-weight: 500;
         line-height: 56px;
+
         span {
           color: #0a97bc;
           color: var(--prColor);
@@ -144,6 +145,52 @@
       height: 32px;
       overflow: hidden;
       width: 32px;
+    }
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .about {
+  background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+
+  &__main {
+    &__text__wrapper {
+      background: #ffffff; /* Kun rejimi uchun text wrapper fon rangi */
+      color: #000; /* Kun rejimi uchun matn rangi */
+      box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+    }
+
+    &__bottom {
+      background: #ffffff; /* Kun rejimi uchun bottom fon rangi */
+      color: #000; /* Kun rejimi uchun matn rangi */
+      box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+    }
+
+    &__title {
+      color: #000; /* Kun rejimi uchun title matn rangi */
+    }
+
+    &__text {
+      color: #333; /* Kun rejimi uchun text matn rangi */
+    }
+  }
+
+  &__app {
+    background-color: #ffffff; /* Kun rejimi uchun fon rangi */
+    color: #000; /* Kun rejimi uchun matn rangi */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+
+    &__title {
+      color: #000; /* Kun rejimi uchun title matn rangi */
+    }
+
+    &__list {
+      color: #007bff; /* Kun rejimi uchun ikon rangi */
+
+      a:hover {
+        color: #0056b3; /* Kun rejimi hover holatda */
+        transition: 0.3s ease;
+      }
     }
   }
 }

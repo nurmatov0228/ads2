@@ -2,13 +2,11 @@
   0% {
     background-color: transparent;
   }
-
   50% {
     background-color: #0a97bc;
     background-color: var(--prColor);
     color: #fff;
   }
-
   to {
     background-color: transparent;
   }
@@ -56,6 +54,25 @@
       position: relative;
       text-align: left;
       z-index: 1;
+    }
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .in {
+  &__item {
+    background-color: #e0e5eb; /* Button orqa foni */
+    color: #000; /* Button matni rangi */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+
+    &:hover {
+      background-color: #007bff; /* Hover holatda button rangi */
+      color: #fff; /* Hover holatda matn rangi */
+      transition: 0.3s ease;
+    }
+
+    &__img {
+      filter: brightness(0.8); /* Kun rejimida img */
     }
   }
 }

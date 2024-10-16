@@ -9,7 +9,7 @@
   }
 
   &__title {
-    color: #fff;
+    color: #fff; /* Tun rejimi uchun matn rangi */
     font-size: 32px;
     font-weight: 700;
     line-height: 38px;
@@ -28,17 +28,15 @@
     border: 2px solid #ddd;
   }
 
-  // Leaflet map container uchun stil
   .leaflet-container {
     border-radius: 24px;
-    filter: brightness(0.9); // O'chirilgan rang ko'rinish
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); // Soyalar qo'shamiz
+    filter: brightness(0.9); /* Tun rejimi */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   }
 
-  // Zoom tugmalarining stilini o'zgartirish
   .leaflet-control-zoom-in,
   .leaflet-control-zoom-out {
-    background-color: #2da1a7; // Tugmalar fon rangi
+    background-color: #2da1a7; /* Tun rejimi */
     color: white;
     border: none;
     border-radius: 8px;
@@ -49,13 +47,12 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #22828a; // Hover efekti
+      background-color: #22828a;
     }
   }
 
-  // Fullscreen tugmasining stilini o'zgartirish
   .leaflet-control-fullscreen {
-    background-color: #2da1a7;
+    background-color: #2da1a7; /* Tun rejimi */
     color: white;
     border: none;
     border-radius: 8px;
@@ -65,6 +62,36 @@
 
     &:hover {
       background-color: #22828a;
+    }
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .map {
+  &__title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  .leaflet-container {
+    filter: brightness(1); /* Kun rejimi */
+  }
+
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out {
+    background-color: #007bff; /* Kun rejimi */
+    color: white;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .leaflet-control-fullscreen {
+    background-color: #007bff; /* Kun rejimi */
+    color: white;
+
+    &:hover {
+      background-color: #0056b3;
     }
   }
 }

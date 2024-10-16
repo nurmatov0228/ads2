@@ -1,6 +1,7 @@
 .contact-page {
   max-width: 1380px;
   margin: 50px auto;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -48,12 +49,14 @@
       }
     }
   }
+
   &__title {
     font-size: 32px;
     font-weight: 700;
     line-height: 38px;
     margin-bottom: 40px;
   }
+
   &__submit {
     align-items: center;
     background-color: #0a97bc;
@@ -87,4 +90,47 @@ input:-internal-autofill-selected {
   background-color: #1d2e34 !important;
   color: #fff !important;
   border: 1px solid #0095ff !important;
+}
+
+/* Yengil rejim */
+body.light-theme .contact-page {
+  &__container {
+    background-color: #f8f9fa; /* Kun rejimi uchun orqa fon rangi */
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  &__form-container {
+    background-color: #ffffff; /* Kun rejimi uchun orqa fon rangi */
+    color: #000; /* Kun rejimi uchun matn rangi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Yengil soya */
+  }
+
+  &__form {
+    &-group {
+      label {
+        color: #000; /* Kun rejimi uchun label rangi */
+      }
+
+      input,
+      textarea {
+        background-color: #f8f9fa; /* Kun rejimi uchun input va textarea orqa fon rangi */
+        color: #000; /* Kun rejimi uchun matn rangi */
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  &__title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  &__submit {
+    background-color: #007bff; /* Kun rejimi uchun button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: all 0.3s ease-out;
+    }
+  }
 }

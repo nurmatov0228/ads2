@@ -1,5 +1,5 @@
 .comments {
-  background-color: #1e2b38;
+  background-color: #1e2b38; /* Tun rejimi uchun fon rangi */
   color: #fff;
   padding: 20px;
   position: relative;
@@ -39,10 +39,10 @@
   }
 
   &__item {
-    background-color: #2e3c4b;
+    background-color: #2e3c4b; /* Tun rejimi uchun fon rangi */
     padding: 20px;
     border-radius: 10px;
-    min-width: 300px; // har bir sharhning minimal kengligi
+    min-width: 300px; /* har bir sharhning minimal kengligi */
     max-width: 608.095px;
     display: flex;
     flex-direction: column;
@@ -85,12 +85,11 @@
     display: flex;
   }
 
-  // React Slick uchun stil
   .slick-slider {
     position: relative;
 
     .slick-dots {
-      bottom: -30px; // nuqtalar pastda bo'lishi uchun
+      bottom: -30px; /* nuqtalar pastda bo'lishi uchun */
     }
 
     .slick-arrow {
@@ -120,7 +119,7 @@
 
     .slick-prev:before,
     .slick-next:before {
-      display: none; // default belgilarni o'chirish
+      display: none; /* default belgilarni o'chirish */
     }
   }
 }
@@ -130,7 +129,7 @@
 }
 
 .comments {
-  background-color: #1e2b38;
+  background-color: #1e2b38; /* Tun rejimi uchun fon rangi */
   color: #fff;
   padding: 20px;
   position: relative;
@@ -149,7 +148,7 @@
   }
 
   &__modal-content {
-    background-color: #1e2b38;
+    background-color: #1e2b38; /* Tun rejimi uchun fon rangi */
     padding: 30px;
     border-radius: 10px;
     width: 400px;
@@ -209,5 +208,64 @@
 
   .comments__rating-input {
     display: flex;
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .comments {
+  background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
+  color: #000; /* Kun rejimi uchun matn rangi */
+
+  &__item {
+    background-color: #ffffff; /* Kun rejimi uchun fon rangi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+  }
+
+  &__title {
+    color: #000; /* Kun rejimi uchun matn rangi */
+
+    &--highlight {
+      color: #007bff;
+    }
+  }
+
+  &__button {
+    background-color: #007bff; /* Kun rejimi uchun button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: 0.3s ease;
+    }
+  }
+
+  &__modal-content {
+    background-color: #ffffff; /* Kun rejimi uchun modal fon rangi */
+    color: #000; /* Kun rejimi uchun matn rangi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+  }
+
+  &__modal-close {
+    color: #000; /* Kun rejimi uchun icon rangi */
+  }
+
+  label {
+    color: #000; /* Kun rejimi uchun matn rangi */
+
+    input,
+    textarea {
+      background-color: #f8f9fa; /* Kun rejimi uchun input va textarea fon rangi */
+      color: #000; /* Kun rejimi uchun matn rangi */
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #007bff; /* Kun rejimi uchun button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: 0.3s ease;
+    }
   }
 }

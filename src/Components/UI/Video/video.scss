@@ -8,27 +8,27 @@
   }
 
   h2 {
-    color: #fff;
+    color: #fff; /* Tun rejimi uchun matn rangi */
     font-size: 36px;
     margin-bottom: 20px;
   }
 
   .slick-list {
     overflow: hidden;
-    padding: 0 20px; // Adding padding to prevent overflow issues
+    padding: 0 20px; /* Overflow masalalarini hal qilish uchun padding */
   }
 
   .slick-slide {
     display: flex;
     justify-content: center;
-    padding: 0 10px; // Adjusting padding for each slide
+    padding: 0 10px; /* Har bir slayd uchun padding */
   }
 
   .video-slider__item {
     position: relative;
     padding: 10px;
     width: 100%;
-    outline: none; // Removing default outline when clicking
+    outline: none; /* Kliklashda default outline olib tashlash */
 
     .video-slider__image {
       width: 266.75px !important;
@@ -72,7 +72,7 @@
     justify-content: center;
 
     &:before {
-      display: none; // Remove default arrow styling
+      display: none; /* Default arrow styling olib tashlash */
     }
   }
 
@@ -90,5 +90,40 @@
     margin-top: 20px;
     font-size: 18px;
     cursor: pointer;
+  }
+}
+
+/* Yengil rejim */
+body.light-theme .video-slider {
+  h2 {
+    color: #000; /* Kun rejimi uchun matn rangi */
+  }
+
+  .video-slider__item {
+    .play-button {
+      svg {
+        color: #007bff !important; /* Kun rejimi uchun play button rangi */
+      }
+    }
+  }
+
+  .slick-arrow {
+    background-color: #007bff; /* Kun rejimi uchun arrow button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: 0.3s ease;
+    }
+  }
+
+  .all-videos-button {
+    background-color: #007bff; /* Kun rejimi uchun button rangi */
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3; /* Kun rejimi hover holatda */
+      transition: 0.3s ease;
+    }
   }
 }

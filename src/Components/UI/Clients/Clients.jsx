@@ -221,7 +221,7 @@ const Clients = () => {
                 onChange={settingText}
               />
               <button type="submit" className="btn modal__btn">
-                {t("clients.submit")}
+                {t("contact1.submit")}
               </button>
             </form>
           </div>

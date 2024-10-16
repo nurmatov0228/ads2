@@ -80,3 +80,42 @@
     }
   }
 }
+
+/* Yengil rejim */
+body.light-theme .footer {
+  &__flex {
+    background-color: #f8f9fa; /* Kun rejimi uchun orqa fon rangi */
+  }
+
+  &__info {
+    &-item {
+      a {
+        color: #000 !important;
+      }
+      p {
+        color: #000; /* Kun rejimi uchun matn rangi */
+      }
+    }
+
+    &-icon {
+      color: #000; /* Kun rejimi uchun ikon rangi */
+    }
+  }
+
+  &__socials img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+  }
+
+  &__bottom {
+    background-color: #f8f9fa; /* Kun rejimi uchun orqa fon rangi */
+    color: #000; /* Kun rejimi uchun matn rangi */
+
+    .footer__logo-img1 {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Yengil soya */
+    }
+
+    p {
+      color: #000; /* Kun rejimi uchun matn rangi */
+    }
+  }
+}
