@@ -114,6 +114,12 @@
   color: #fff !important;
 }
 
+.css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input,
+.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
+.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
+  color: #fff !important ;
+}
+
 /* Yengil rejim */
 body.light-theme .clients-section {
   background-color: #f8f9fa; /* Kun rejimi uchun fon rangi */
@@ -172,10 +178,10 @@ body.light-theme .modal .modal-content {
       transition: 0.3s ease;
     }
   }
-}
 
-.css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input,
-.css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
-.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
-  color: #000 !important; /* Kun rejimi uchun matn rangi */
+  .css-1eiam5b-MuiInputBase-input-MuiOutlinedInput-input,
+  .css-18pjc51-MuiFormLabel-root-MuiInputLabel-root,
+  .css-1q964xs-MuiFormLabel-root-MuiInputLabel-root {
+    color: #000 !important; /* Kun rejimi uchun matn rangi */
+  }
 }
