@@ -6,18 +6,21 @@ const vacancies = [
   {
     title: "vacancy1.call_center_operator", // Tarjima kaliti
     skills: ["vacancy1.education: среднее специальное;"], // Tarjima kaliti
+    link: "https://classic.jobsearch.az/",
   },
   {
     title: "vacancy1.web_designer", // Tarjima kaliti
-    skills: ["vacancy1.experience: 3 года"], // Tarjima kaliti
+    skills: ["vacancy1.experience: 3 года"], // Tarjima kaliti,
+    link: `https://vacancy.argos.uz/`,
   },
   {
     title: "vacancy1.logistician", // Tarjima kaliti
-    skills: ["vacancy1.skills: ddddddd"], // Tarjima kaliti
+    skills: ["vacancy1.skills: ddddddd"], // Tarjima kaliti,
+    link: "https://jobs.glorri.az/",
   },
 ];
 
-const VacancyCard = ({ title, skills }) => {
+const VacancyCard = ({ title, skills, link }) => {
   const { t } = useTranslation(); // i18next dan tarjimalarni olish uchun
 
   return (
@@ -36,8 +39,11 @@ const VacancyCard = ({ title, skills }) => {
           ))}
         </ul>
       </div>
-      <button className="vacancy-card__button btn">{t("vacancy1.more")}</button>{" "}
-      {/* Tarjima olingan tugma matni */}
+      <a href={link}>
+        <button className="vacancy-card__button btn">
+          {t("vacancy1.more")}
+        </button>{" "}
+      </a>
     </div>
   );
 };

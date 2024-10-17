@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/about.scss";
 import logo from "../img/Screenshot 2024-10-08 191403.png";
 import { useTranslation } from "react-i18next";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const { t } = useTranslation(); // i18next dan tarjimalarni olish uchun
 
   return (
@@ -26,37 +29,78 @@ const About = () => {
             <h3 className="about__main__bottom__title">
               {t("about.statistics.title")}
             </h3>
+
             <div className="about__main__bottom__list">
-              <div className="about__main__botton__item">
-                <p className="about__main__bottom__num numbers__counter">0</p>
-                <p className="about__main__bottom__item__bottom__text">
-                  {t("about.statistics.successful_teams")}
-                </p>
-              </div>
-              <div className="about__main__botton__item">
-                <p className="about__main__bottom__num numbers__counter">0</p>
-                <p className="about__main__bottom__item__bottom__text">
-                  {t("about.statistics.working_in_company")}
-                </p>
-              </div>
-              <div className="about__main__botton__item">
-                <p className="about__main__bottom__num numbers__counter">0</p>
-                <p className="about__main__bottom__item__bottom__text">
-                  {t("about.statistics.promoted_in_social_media")}
-                </p>
-              </div>
-              <div className="about__main__botton__item">
-                <p className="about__main__bottom__num numbers__counter">0</p>
-                <p className="about__main__bottom__item__bottom__text">
-                  {t("about.statistics.developed_and_launched")}
-                </p>
-              </div>
-              <div className="about__main__botton__item">
-                <p className="about__main__bottom__num numbers__counter">0</p>
-                <p className="about__main__bottom__item__bottom__text">
-                  {t("about.statistics.products_in_graph")}
-                </p>
-              </div>
+              <VisibilitySensor
+                onChange={(isVisible) => setIsVisible(isVisible)}
+                partialVisibility
+              >
+                {({ isVisible }) => (
+                  <>
+                    <div className="about__main__botton__item">
+                      <p className="about__main__bottom__num numbers__counter">
+                        <CountUp
+                          start={isVisible ? 0 : null}
+                          end={3}
+                          duration={1.2}
+                        />
+                        +
+                      </p>
+                      <p className="about__main__bottom__item__bottom__text">
+                        {t("about.statistics.successful_teams")}
+                      </p>
+                    </div>
+                    <div className="about__main__botton__item">
+                      <p className="about__main__bottom__num numbers__counter">
+                        <CountUp
+                          start={isVisible ? 0 : null}
+                          end={24}
+                          duration={1.2}
+                        />
+                      </p>
+                      <p className="about__main__bottom__item__bottom__text">
+                        {t("about.statistics.working_in_company")}
+                      </p>
+                    </div>
+                    <div className="about__main__botton__item">
+                      <p className="about__main__bottom__num numbers__counter">
+                        <CountUp
+                          start={isVisible ? 0 : null}
+                          end={138}
+                          duration={1.2}
+                        />
+                      </p>
+                      <p className="about__main__bottom__item__bottom__text">
+                        {t("about.statistics.promoted_in_social_media")}
+                      </p>
+                    </div>
+                    <div className="about__main__botton__item">
+                      <p className="about__main__bottom__num numbers__counter">
+                        <CountUp
+                          start={isVisible ? 0 : null}
+                          end={336}
+                          duration={1.2}
+                        />
+                      </p>
+                      <p className="about__main__bottom__item__bottom__text">
+                        {t("about.statistics.developed_and_launched")}
+                      </p>
+                    </div>
+                    <div className="about__main__botton__item">
+                      <p className="about__main__bottom__num numbers__counter">
+                        <CountUp
+                          start={isVisible ? 0 : null}
+                          end={53}
+                          duration={1.2}
+                        />
+                      </p>
+                      <p className="about__main__bottom__item__bottom__text">
+                        {t("about.statistics.products_in_graph")}
+                      </p>
+                    </div>
+                  </>
+                )}
+              </VisibilitySensor>
             </div>
           </div>
         </div>

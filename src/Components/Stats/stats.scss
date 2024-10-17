@@ -34,6 +34,16 @@
       flex-direction: column;
       align-items: center;
 
+      &:nth-child(1) {
+        min-width: 187.29px;
+      }
+      &:nth-child(2) {
+        min-width: 359.9px;
+      }
+      &:nth-child(3) {
+        min-width: 317.05px;
+      }
+
       .stats__number {
         font-family: Unbounded;
         font-size: 80px;

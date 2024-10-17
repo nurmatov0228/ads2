@@ -37,7 +37,7 @@ const Topnav = () => {
               <a
                 target="_blank"
                 className="link-btn one"
-                href="https://t.me/My_VALLEY"
+                href="https://t.me/bahtiyorkamalov"
               >
                 <img
                   src="https://www.inoutads.uz/_nuxt/telegram.61463358.svg"
@@ -47,16 +47,18 @@ const Topnav = () => {
                 />
                 <p className="link-text">{t("telegram")}</p>
               </a>
-              <button className="link-btn three">
-                <img
-                  src="https://www.inoutads.uz/_nuxt/download.5c2f07e8.svg"
-                  alt="download"
-                  width="20"
-                  height="20"
-                />
-                <p className="link-text">{t("presentation")}</p>
-              </button>
-              <a href="#registration" className="link-btn three">
+              <a href={logo} download>
+                <button className="link-btn three">
+                  <img
+                    src="https://www.inoutads.uz/_nuxt/download.5c2f07e8.svg"
+                    alt="download"
+                    width="20"
+                    height="20"
+                  />
+                  <p className="link-text">{t("presentation")}</p>
+                </button>
+              </a>
+              <a href="#" className="link-btn three">
                 <img
                   src="https://www.inoutads.uz/_nuxt/sms.32d91e6a.svg"
                   alt="sms"
