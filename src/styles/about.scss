@@ -165,6 +165,11 @@ body.light-theme .about {
       background: #ffffff; /* Kun rejimi uchun bottom fon rangi */
       color: #000; /* Kun rejimi uchun matn rangi */
       box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1); /* Yengil soya */
+      &__num {
+        span {
+          color: #000;
+        }
+      }
     }
 
     &__title {
